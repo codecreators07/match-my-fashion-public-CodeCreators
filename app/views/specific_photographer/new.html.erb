@@ -9,16 +9,24 @@
       <b>PHOTOGRAPHER INFORMATION</b>
     </h1>
     <%= form_for @specific_photographer, :action => 'create', :url => '/specific_photographer' do |f| %>
-      
+    
 
-
+    <div class="form-group">
+                  
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-dollar" style="font-size:20px" aria-hidden="true"></i></span>
+                      <%= f.select :compensation, options_for_select(["Any","Assignment Based", "Pay Only"]) ,{},{ :class => 'form-control', placeholder: 'Compensation' } %>
+                    </div>
+                  </div>
+                </div>
 
             
 	<div class="form-group">
                   
                   <div class="cols-sm-10">
                     <div class="input-group">
-                      <span class="input-group-addon">< class="fa fa-calendar"> Select Years of Experience<style="font-size:20px" aria-hidden="true"></span>
+                      <span class="input-group-addon"><i class="fa fa-calendar"> Select Years of Experience<style="font-size:20px" aria-hidden="true"></i></span>
                       <%= f.select :experience, options_for_select(["0-2 years","3-6 years", "7-10 years", "11+ years"]),{},{ :class => 'form-control', placeholder: 'Select years of Experience' } %>
                     </div>
                   </div>

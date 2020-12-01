@@ -126,6 +126,14 @@
 							            <%= form.file_field :cover_picture, accept: 'image/png,image/jpeg',:class => 'custom-file-input', :type => 'file' %>
 									</div>
 								</div>
+                                
+                                <div class="be-large-post-align">
+                                    <div class="be-change-ava col-xs-12 col-sm-6">
+                                        <label class="custom-file-label" for="customFile">Upload Gallery Picture</label>
+                                        <%= form.file_field :gallery_pictures, multiple: true, accept: 'image/png,image/jpeg',:class => 'custom-file-input', :type => 'file' %>
+                                </div>
+                                </div>
+                                
 								<div class="be-large-post-align">
 									<div class="row">
 										<!--name-->
@@ -257,7 +265,7 @@
 												<div class="form-label">Compensation Type</div>
 												<div>
 													<span class="input-group-addon"><i class="fa fa-dollar" style="font-size:20px" aria-hidden="true"></i></span>
-		                      						<%= form.select :compensation, options_for_select([["SELECT", "Select type of Compensation"],["Assignment Based","Assignment Based"],["Paid Only","Paid Only"]], form.object.compensation || "Any Payment"),{},{ :class => 'form-control' }%>
+		                      						<%= form.select :compensation, options_for_select([["SELECT", "Select type of Compensation"],["Any","Any"],["Assignment Based","Assignment Based"],["Paid Only","Paid Only"]], form.object.compensation || "Any Payment"),{},{ :class => 'form-control' }%>
 												</div>
 											</div>								
 										</div>
